@@ -7,11 +7,12 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 function ResponsiveAppBar() {
+
   return (
     <AppBar position="sticky">
       <Toolbar>
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          AUTHOR HUB
+          Product Store
         </Typography>
 
         <Box>
@@ -31,7 +32,7 @@ function ResponsiveAppBar() {
           </Button>
           <Button
             component={NavLink}
-            to="/author"
+            to="/product"
             sx={{
               marginRight: "16px",
               textDecoration: "none",
@@ -41,7 +42,7 @@ function ResponsiveAppBar() {
               },
             }}
           >
-            Author
+            Products
           </Button>
           <Button
             component={NavLink}
@@ -54,7 +55,20 @@ function ResponsiveAppBar() {
               },
             }}
           >
-            Post
+            Cart
+          </Button>
+          <Button
+            component={NavLink}
+            to="/login"
+            sx={{
+              textDecoration: "none",
+              color: "white",
+              "&.active": {
+                fontWeight: "bold",
+              },
+            }}
+          >
+            LogOut
           </Button>
         </Box>
       </Toolbar>

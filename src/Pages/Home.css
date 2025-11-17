@@ -1,0 +1,160 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  color: #222;
+}
+
+.home-container {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+  animation: fadeDown 0.8s ease-out;
+}
+
+.home-subtitle {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease-out;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  animation: fadeUp 0.6s ease both;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.image-wrapper {
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.product-content {
+  padding: 18px 20px;
+  text-align: left;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.product-category {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #555;
+  height: 38px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.product-price {
+  color: #007bff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.view-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* 🌈 Subtle Animations */
+@keyframes fadeUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 1.8rem;
+  }
+
+  .product-image {
+    height: 180px;
+  }
+
+  .product-content {
+    text-align: center;
+  }
+}
+    

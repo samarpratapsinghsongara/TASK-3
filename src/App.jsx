@@ -1,23 +1,34 @@
-import Footer from "./Footer";
-import ResponsiveAppBar from "./NavBar";
-import Home from "./Pages/Home";
-import Author from "./Pages/Author";
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import ResponsiveAppBar from "./NavBar";
+import Footer from "./Footer";
+import Home from "./Pages/Home";
 import Post from "./Pages/Post";
-import AuthorProfile from "./Pages/AuthorProfile";
 import PostDetails from "./Pages/PostDetails";
+import ProductDetails from "./Pages/ProductDetails";
+import Product from "./Pages/Product";
+import Login from "./Pages/Login";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+  const handleLoginSuccess = () => {
+    setIsLoggedIn(true)
+  }
+
   return (
     <>
       <ResponsiveAppBar />
+      { !isLoggedIn ? (<Login onLogin={handleLoginSuccess}/>) : (
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/author" element={<Author />} />
+        <Route path="/product" element={<Product />} />
         <Route path="/post" element={<Post />} />
-        <Route path="/authors/:authorId" element={<AuthorProfile />} />
         <Route path="/posts/:postsId" element={<PostDetails/>}/>
+        <Route path="/product/:productId" element={<ProductDetails/>}></Route>
+        <Route path="/login" element={<Login/>}></Route>
       </Routes>
+      )}
       <Footer />
     </>
   );
