@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import ResponsiveAppBar from "./NavBar";
 import Footer from "./Footer";
 import Home from "./Pages/Home";
-import Post from "./Pages/Post";
+import Cart from "./Pages/Cart";
 import PostDetails from "./Pages/PostDetails";
 import ProductDetails from "./Pages/ProductDetails";
 import Product from "./Pages/Product";
@@ -23,8 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
-        <Route path="/post" element={<Post />} />
-        <Route path="/posts/:postsId" element={<PostDetails/>}/>
+        <Route path="/cart" element={<Cart />} />
         <Route path="/product/:productId" element={<ProductDetails/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
       </Routes>

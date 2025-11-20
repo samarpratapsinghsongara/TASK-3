@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Card, Box, CardHeader, CardContent, Typography, Button } from '@mui/material';
 
 const PostDetails = () => {
-    const [post, setPost] = useState(null); 
+    const [, setPost] = useState(null); 
     const [editPost,setEditPost] = useState()
     const { postsId } = useParams(); 
 

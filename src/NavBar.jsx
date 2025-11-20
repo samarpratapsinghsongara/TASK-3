@@ -46,7 +46,7 @@ function ResponsiveAppBar() {
           </Button>
           <Button
             component={NavLink}
-            to="/post"
+            to="/cart"
             sx={{
               textDecoration: "none",
               color: "white",

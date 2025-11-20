@@ -39,7 +39,7 @@ export default function ProductDetails() {
           <p className="product-category">{product.category}</p>
           <p className="product-description">{product.description}</p>
           <p className="product-price">₹ {product.price}</p>
-          <Link to="/" className="back-btn">← Back to Products</Link>
+          <Link to="/" className="back-btn">← Back to Products</Link> <Link className="back-btn">Add to Cart</Link>
         </div>
       </div>
     </div>

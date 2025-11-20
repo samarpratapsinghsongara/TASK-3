@@ -9,7 +9,7 @@ export default function Product() {
   const [searchText, setSearchText] = useState("");
   const [sortProduct, setSortProduct] = useState("default");
 
-  const url = "http://localhost:3000/api/v1/products";
+  const url = "https://fakestoreapi.com/products";
 
   const fetchApi = async () => {
     try {
@@ -43,6 +43,10 @@ export default function Product() {
 
   if (loading) return <p className="loading">Loading products...</p>;
   if (error) return <p className="error">{error}</p>;
+
+  const submit = async => {
+    let handleConst = document.getElementById()
+  }
 
   return (
     <div className="home-page">
