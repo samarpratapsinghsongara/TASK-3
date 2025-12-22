@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./ProductDetails.css";
 
-export default function ProductDetails() {
+export default function ProductDetails({addToCart}) {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [error, setError] = useState(null);
@@ -39,7 +39,7 @@ export default function ProductDetails() {
           <p className="product-category">{product.category}</p>
           <p className="product-description">{product.description}</p>
           <p className="product-price">₹ {product.price}</p>
-          <Link to="/" className="back-btn">← Back to Products</Link> <Link className="back-btn">Add to Cart</Link>
+          <Link to="/" className="back-btn">← Back to Products</Link> <Link className="back-btn" onClick={()=>addToCart(product)}>Add to Cart</Link>
         </div>
       </div>
     </div>
